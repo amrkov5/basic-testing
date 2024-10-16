@@ -52,6 +52,8 @@ describe('BankAccount', () => {
     const result = await account.fetchBalance();
     if (result) {
       expect(typeof result).toBe('number');
+    } else {
+      expect(result).toBeNull();
     }
   });
 
